@@ -1,0 +1,39 @@
+.home {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    margin-top: 7em;
+    animation: 1s animation;
+}
+
+.textfield {
+    font-size: 18px;
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 300px;
+    padding: 8px;
+    background: transparent;
+}
+
+::placeholder {
+    color: lightblue;
+}
+
+.home * {
+    margin-top: 1em;
+}
+
+.home button {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ceffff;
+    border: 0;
+    padding: 12px;
+    width: 320px;
+    background: #f1bc03;
+}
+
+@keyframes animation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

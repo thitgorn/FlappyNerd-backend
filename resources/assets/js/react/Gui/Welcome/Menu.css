@@ -1,0 +1,35 @@
+.menu {
+    max-width: 400px;
+    text-align: center;
+    margin: auto;
+    margin-top: 6em;
+    animation: 1s animation;
+}
+
+.menu * {
+    margin-top: 2em;
+}
+
+.menu button {
+    font-weight: bold;
+    font-size: 20px;
+    color: #ceffff;
+    border: 0;
+    padding: 12px;
+    width: 300px;
+    background: darkgreen;
+}
+
+.userinfo {
+    font-size: 20px;
+    padding: 0.5em;
+    padding-left: 1em;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.profile-pic {
+    border: 2px solid white;
+    padding: 10px;
+    margin-right: 1em;
+}
