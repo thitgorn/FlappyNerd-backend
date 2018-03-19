@@ -7,7 +7,7 @@ class Menu extends React.Component {
             return (
                 <div style={{display: 'flex', width: '150px'}}>
                     <div className="profile-pic">pic</div>
-                    <span style={{margin: 'auto'}}>username</span>
+                    <span style={{margin: 'auto'}}>{this.props.user.name}</span>
                 </div>
             );
         }
@@ -25,7 +25,7 @@ class Menu extends React.Component {
                     <button onClick={() => {this.props.changePage('game')}}>Start</button>
                     <button>Scoreboard</button>
                     <button>Option</button>
-                    <button onClick={() => {this.props.changePage('home')}}>Logout</button>
+                    <a href="/logout"><button>Logout</button></a>
                 </div>
             </div>
         );

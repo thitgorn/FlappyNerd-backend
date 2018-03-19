@@ -12,15 +12,16 @@ class Home extends React.Component {
                 <h1>FLAPPY BIRD</h1>
                 <input placeholder="Username" className="textfield" />
                 <input placeholder="Password" className="textfield" type="password" />
-                <button className="button" onClick={ () => this.props.changePage("menu", true)}>Login</button>
+                <a href="/login"><button className="button">Login</button></a>
+                {/* <button className="button" onClick={ () => this.props.changePage("menu", true)}>Login</button> */}
                 <div>
                     Don't have an account ?
-                        <button style={smallBtn} onClick={ () => this.props.changePage("signup")}>Sign up</button>
+                        <a href="/register"><button style={smallBtn}>Sign up</button></a>
                 </div>
                 <div style={or}>
                     <hr style={{width: '100px'}}/>OR<hr style={{width: '100px'}}/> 
                 </div>
-                <button onClick={ () => this.props.changePage("menu", false) }>GUEST &nbsp;&nbsp;Login</button>
+                <button onClick={ () => this.props.changePage("menu", false) }>GUEST</button>
             </div>
         );
     }
