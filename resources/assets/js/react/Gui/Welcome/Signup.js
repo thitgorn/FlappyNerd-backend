@@ -3,7 +3,7 @@ import './Signup.css'
 
 class Signup extends React.Component {
     // TODO check same password with comfirmed password
-    
+
     render() {
         return (
             <div className="signup">
