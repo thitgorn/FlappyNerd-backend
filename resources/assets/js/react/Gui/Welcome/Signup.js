@@ -8,10 +8,12 @@ class Signup extends React.Component {
             <div className="signup">
                 <h1>FLAPPY BIRD</h1>
                 <h2>Sign up</h2>
-                <input className="textfield" placeholder="Username"></input>
-                <input className="textfield" placeholder="Password" type="password"></input>
-                <input className="textfield" placeholder="Confirm Password" type="password"></input>
-                <button onClick={ () => this.props.changePage('home')}>Sign up</button>
+                <form method="POST" action="/register">
+                    <input className="textfield" placeholder="Username"></input>
+                    <input className="textfield" placeholder="Password" type="password"></input>
+                    <input className="textfield" placeholder="Confirm Password" type="password"></input>
+                    <button onClick={ () => this.props.changePage('home')}>Sign up</button>
+                </form>
                 <button style={{background: 'darkgrey'}} onClick={ () => this.props.changePage('home')}>Cancel</button>
             </div>
         );

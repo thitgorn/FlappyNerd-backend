@@ -10,21 +10,25 @@ class Home extends React.Component {
         return (
             <div className="home">
                 <h1>FLAPPY BIRD</h1>
-                <input placeholder="Username" className="textfield" />
-                <input placeholder="Password" className="textfield" type="password" />
-                <a href="/login"><button className="button">Login</button></a>
-                {/* <button className="button" onClick={ () => this.props.changePage("menu", true)}>Login</button> */}
-                <div>
-                    Don't have an account ?
-                        <a href="/register"><button style={smallBtn}>Sign up</button></a>
-                </div>
-                <div style={or}>
-                    <hr style={{width: '100px'}}/>OR<hr style={{width: '100px'}}/> 
-                </div>
-                <button onClick={ () => this.props.changePage("menu", false) }>GUEST</button>
+                <form method="POST" action="/login">
+                    <input id="email" type="email" name="email" placeholder="Username" className="textfield" required autofocus/>
+                    <input id="password" type="password" name="password" placeholder="Password" className="textfield" type="password" required/>
+                    <label>
+                            <input type="checkbox" name="remember" /> Remember Me
+                    </label>
+                    <button type="submit"  className="button">Login</button>
+                </form>
+                    <div>
+                        Don't have an account ?
+                            <button style={smallBtn} onClick={ () => this.props.changePage("signup")}>Sign up</button>
+                    </div>
+                    <div style={or}>
+                        <hr style={{width: '100px'}}/>OR<hr style={{width: '100px'}}/> 
+                    </div>
+                <button onClick={ () => this.props.changePage("menu", false) }>GUEST &nbsp;&nbsp;Login</button>
+
             </div>
         );
     }
 }
-
 export default Home;

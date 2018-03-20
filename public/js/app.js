@@ -19284,6 +19284,8 @@ exports.push([module.i, ".App {\n  text-align: center;\n}\n\n.App-logo {\n  anim
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Home_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Home_css__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -19308,7 +19310,8 @@ var Home = function (_React$Component) {
     _createClass(Home, [{
         key: 'render',
         value: function render() {
-            var _this2 = this;
+            var _React$createElement,
+                _this2 = this;
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -19318,14 +19321,20 @@ var Home = function (_React$Component) {
                     null,
                     'FLAPPY BIRD'
                 ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { placeholder: 'Username', className: 'textfield' }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { placeholder: 'Password', className: 'textfield', type: 'password' }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'a',
-                    { href: '/login' },
+                    'form',
+                    { method: 'POST', action: '/login' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'email', type: 'email', name: 'email', placeholder: 'Username', className: 'textfield', required: true, autofocus: true }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', (_React$createElement = { id: 'password', type: 'password', name: 'password', placeholder: 'Password', className: 'textfield' }, _defineProperty(_React$createElement, 'type', 'password'), _defineProperty(_React$createElement, 'required', true), _React$createElement)),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'label',
+                        null,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { type: 'checkbox', name: 'remember' }),
+                        ' Remember Me'
+                    ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'button',
-                        { className: 'button' },
+                        { type: 'submit', className: 'button' },
                         'Login'
                     )
                 ),
@@ -19334,13 +19343,11 @@ var Home = function (_React$Component) {
                     null,
                     'Don\'t have an account ?',
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        { href: '/register' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'button',
-                            { style: smallBtn },
-                            'Sign up'
-                        )
+                        'button',
+                        { style: smallBtn, onClick: function onClick() {
+                                return _this2.props.changePage("signup");
+                            } },
+                        'Sign up'
                     )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -19355,7 +19362,7 @@ var Home = function (_React$Component) {
                     { onClick: function onClick() {
                             return _this2.props.changePage("menu", false);
                         } },
-                    'GUEST'
+                    'GUEST \xA0\xA0Login'
                 )
             );
         }
@@ -19614,15 +19621,19 @@ var Signup = function (_React$Component) {
                     null,
                     'Sign up'
                 ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'textfield', placeholder: 'Username' }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'textfield', placeholder: 'Password', type: 'password' }),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'textfield', placeholder: 'Confirm Password', type: 'password' }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'button',
-                    { onClick: function onClick() {
-                            return _this2.props.changePage('home');
-                        } },
-                    'Sign up'
+                    'form',
+                    { method: 'POST', action: '/register' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'textfield', placeholder: 'Username' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'textfield', placeholder: 'Password', type: 'password' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'textfield', placeholder: 'Confirm Password', type: 'password' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'button',
+                        { onClick: function onClick() {
+                                return _this2.props.changePage('home');
+                            } },
+                        'Sign up'
+                    )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'button',
