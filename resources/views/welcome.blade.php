@@ -8,6 +8,8 @@
         <title>Flappy Nerd</title>
 
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.8.10/themes/smoothness/jquery-ui.css" type="text/css">
+        <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/jquery-ui.min.js"></script>
         <script$.ajaxSetup({
           headers: {
               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
