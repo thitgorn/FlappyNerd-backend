@@ -13,16 +13,24 @@
 edit .env file
 
 DB_CONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=test ( your database ) 
+
 DB_USERNAME=root ( your database id )
+
 DB_PASSWORD=password ( your database password )
+
 
 ### compile js file
 
 ```yarn run dev```
+
 or if you want real time compile
+
 ```yarn run watch--poll```
 
 ### to run php server
