@@ -19605,6 +19605,9 @@ var Signup = function (_React$Component) {
 
     _createClass(Signup, [{
         key: 'render',
+
+        // TODO check same password with comfirmed password
+
         value: function render() {
             var _this2 = this;
 
@@ -19624,14 +19627,13 @@ var Signup = function (_React$Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'form',
                     { method: 'POST', action: '/register' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'textfield', placeholder: 'Username' }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'textfield', placeholder: 'Password', type: 'password' }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'textfield', placeholder: 'Confirm Password', type: 'password' }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'name', type: 'text', className: 'textfield', name: 'name', placeholder: 'Name', required: true, autofocus: true }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'email', type: 'email', className: 'textfield', name: 'email', placeholder: 'Email', required: true }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'password', type: 'password', className: 'textfield', name: 'password', placeholder: 'Password', required: true }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'password-confirm', type: 'password', className: 'textfield', name: 'password_confirmation', placeholder: 'Confirm Password', required: true }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'button',
-                        { onClick: function onClick() {
-                                return _this2.props.changePage('home');
-                            } },
+                        { type: 'submit' },
                         'Sign up'
                     )
                 ),

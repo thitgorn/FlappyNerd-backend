@@ -18,5 +18,11 @@
     <body>
         <div id="root"></div>
         <script src="{{asset('js/app.js')}}" ></script>
+
+        @if (count($errors) > 0)
+            <div class="alert alert-success hideMe">
+                    <strong>{{ $errors->first() }}</strong>
+            <div>
+        @endif
     </body>
 </html>
