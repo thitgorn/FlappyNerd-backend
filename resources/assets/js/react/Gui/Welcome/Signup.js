@@ -8,7 +8,6 @@ class Signup extends React.Component {
         return (
             <div className="signup">
                 <h1>FLAPPY BIRD</h1>
-                <h2>Sign up</h2>
                 <form method="POST" action="https://flappylaravel.herokuapp.com/register">
                 <input id="name" type="text" className="textfield" name="name" placeholder="Name" required autofocus/>
                 <input id="email" type="email" className="textfield" name="email" placeholder="Email" required/>
