@@ -14,7 +14,8 @@ class App extends Component {
     this.state = {
       page: "home",
       login: false,
-      user: {}
+      user: {},
+      isLoad: false,
     }
     this.changePage = this.changePage.bind(this);
   }
@@ -26,6 +27,7 @@ class App extends Component {
       if(data!=="Guest") {
         this.setState({ page : "menu" ,login: true, user: data})
       }
+      this.setState( { isLoad : true })
     } ).catch()
   }
 
@@ -38,18 +40,31 @@ class App extends Component {
   
   render() {
     return (
-      <div style={{
-        width: `100%`,
-        height: `100%`,
-        clip: 'auto',
-        position: 'absolute',
-        overflow: 'hidden',
-        backgroundImage: 'linear-gradient(to right, #adefff, white)'
-      }}>
-        {this.state.page === "home" && <Home changePage={this.changePage} />}
-        {this.state.page === "menu" && <Menu changePage={this.changePage} login={this.state.login} user={this.state.user}/>}
-        {this.state.page === "signup" && <Signup changePage={this.changePage} />}
-        {this.state.page === "game" && <GameApp />}
+      <div>
+          <div style={{
+            width: `100%`,
+            height: `100%`,
+            clip: 'auto',
+            position: 'absolute',
+            overflow: 'hidden',
+            backgroundImage: 'linear-gradient(to right, #adefff, white)'
+          }}>
+          { !this.state.isLoad && <div style={{ position: 'fixed',
+                                                top: `50%`,
+                                                left: `50%`,
+                                                /* bring your own prefixes */
+                                                transform: 'translate(-50%, -50%)'}}>หมุนๆ</div>}
+          { this.state.isLoad &&
+            <div>
+              {this.state.page === "home" && <Home changePage={this.changePage} />}
+              {this.state.page === "menu" && <Menu changePage={this.changePage} login={this.state.login} user={this.state.user}/>}
+              {this.state.page === "signup" && <Signup changePage={this.changePage} />}
+              {this.state.page === "game" && <GameApp />}
+            </div>
+          }
+          </div>
+
+
       </div>
     );
   }

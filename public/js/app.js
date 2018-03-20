@@ -19175,7 +19175,8 @@ var App = function (_Component) {
     _this.state = {
       page: "home",
       login: false,
-      user: {}
+      user: {},
+      isLoad: false
     };
     _this.changePage = _this.changePage.bind(_this);
     return _this;
@@ -19192,6 +19193,7 @@ var App = function (_Component) {
         if (data !== "Guest") {
           _this2.setState({ page: "menu", login: true, user: data });
         }
+        _this2.setState({ isLoad: true });
       }).catch();
     }
   }, {
@@ -19207,18 +19209,35 @@ var App = function (_Component) {
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { style: {
-            width: '100%',
-            height: '100%',
-            clip: 'auto',
-            position: 'absolute',
-            overflow: 'hidden',
-            backgroundImage: 'linear-gradient(to right, #adefff, white)'
-          } },
-        this.state.page === "home" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Gui_Welcome_Home__["a" /* default */], { changePage: this.changePage }),
-        this.state.page === "menu" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Gui_Welcome_Menu__["a" /* default */], { changePage: this.changePage, login: this.state.login, user: this.state.user }),
-        this.state.page === "signup" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Gui_Welcome_Signup__["a" /* default */], { changePage: this.changePage }),
-        this.state.page === "game" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Gui_Map_GameApp__["a" /* default */], null)
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { style: {
+              width: '100%',
+              height: '100%',
+              clip: 'auto',
+              position: 'absolute',
+              overflow: 'hidden',
+              backgroundImage: 'linear-gradient(to right, #adefff, white)'
+            } },
+          !this.state.isLoad && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { style: { position: 'fixed',
+                top: '50%',
+                left: '50%',
+                /* bring your own prefixes */
+                transform: 'translate(-50%, -50%)' } },
+            '\u0E2B\u0E21\u0E38\u0E19\u0E46'
+          ),
+          this.state.isLoad && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            null,
+            this.state.page === "home" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Gui_Welcome_Home__["a" /* default */], { changePage: this.changePage }),
+            this.state.page === "menu" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Gui_Welcome_Menu__["a" /* default */], { changePage: this.changePage, login: this.state.login, user: this.state.user }),
+            this.state.page === "signup" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Gui_Welcome_Signup__["a" /* default */], { changePage: this.changePage }),
+            this.state.page === "game" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Gui_Map_GameApp__["a" /* default */], null)
+          )
+        )
       );
     }
   }]);
@@ -19319,12 +19338,12 @@ var Home = function (_React$Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'h1',
                     null,
-                    'FLAPPY BIRD'
+                    'FLAPPY AAA'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'form',
-                    { method: 'POST', action: '/login' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'email', type: 'email', name: 'email', placeholder: 'Username', className: 'textfield', required: true, autofocus: true }),
+                    { method: 'POST', action: 'https://flappylaravel.herokuapp.com/login' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'email', type: 'email', name: 'email', placeholder: 'Username', className: 'textfield', required: true, autoFocus: true }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', (_React$createElement = { id: 'password', type: 'password', name: 'password', placeholder: 'Password', className: 'textfield' }, _defineProperty(_React$createElement, 'type', 'password'), _defineProperty(_React$createElement, 'required', true), _React$createElement)),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'label',
@@ -19346,7 +19365,7 @@ var Home = function (_React$Component) {
                         'button',
                         { style: smallBtn, onClick: function onClick() {
                                 return _this2.props.changePage("signup");
-                            } },
+                            }, disabled: true },
                         'Sign up'
                     )
                 ),
@@ -19626,7 +19645,7 @@ var Signup = function (_React$Component) {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'form',
-                    { method: 'POST', action: '/register' },
+                    { method: 'POST', action: 'https://flappylaravel.herokuapp.com/register' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'name', type: 'text', className: 'textfield', name: 'name', placeholder: 'Name', required: true, autofocus: true }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'email', type: 'email', className: 'textfield', name: 'email', placeholder: 'Email', required: true }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'password', type: 'password', className: 'textfield', name: 'password', placeholder: 'Password', required: true }),
