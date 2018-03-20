@@ -19365,7 +19365,7 @@ var Home = function (_React$Component) {
                         'button',
                         { style: smallBtn, onClick: function onClick() {
                                 return _this2.props.changePage("signup");
-                            }, disabled: true },
+                            } },
                         'Sign up'
                     )
                 ),
