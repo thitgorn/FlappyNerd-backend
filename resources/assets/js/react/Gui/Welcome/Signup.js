@@ -9,7 +9,7 @@ class Signup extends React.Component {
             <div className="signup">
                 <h1>FLAPPY BIRD</h1>
                 <h2>Sign up</h2>
-                <form method="POST" action="/register">
+                <form method="POST" action="https://mysterious-temple-82449.herokuapp.com/register">
                 <input id="name" type="text" className="textfield" name="name" placeholder="Name" required autofocus/>
                 <input id="email" type="email" className="textfield" name="email" placeholder="Email" required/>
                 <input id="password" type="password" className="textfield" name="password" placeholder="Password" required/>

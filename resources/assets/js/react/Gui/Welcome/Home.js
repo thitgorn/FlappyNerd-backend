@@ -10,8 +10,8 @@ class Home extends React.Component {
         return (
             <div className="home">
                 <h1>FLAPPY BIRD</h1>
-                <form method="POST" action="/login">
-                    <input id="email" type="email" name="email" placeholder="Username" className="textfield" required autofocus/>
+                <form method="POST" action="https://mysterious-temple-82449.herokuapp.com/login">
+                    <input id="email" type="email" name="email" placeholder="Username" className="textfield" required autoFocus/>
                     <input id="password" type="password" name="password" placeholder="Password" className="textfield" type="password" required/>
                     <label>
                             <input type="checkbox" name="remember" /> Remember Me
