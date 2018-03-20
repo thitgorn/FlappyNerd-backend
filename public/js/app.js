@@ -19639,11 +19639,6 @@ var Signup = function (_React$Component) {
                     'FLAPPY BIRD'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h2',
-                    null,
-                    'Sign up'
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'form',
                     { method: 'POST', action: 'https://flappylaravel.herokuapp.com/register' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'name', type: 'text', className: 'textfield', name: 'name', placeholder: 'Name', required: true, autofocus: true }),
