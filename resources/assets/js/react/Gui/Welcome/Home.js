@@ -20,7 +20,7 @@ class Home extends React.Component {
                 </form>
                     <div>
                         Don't have an account ?
-                            <button style={smallBtn} onClick={ () => this.props.changePage("signup")}>Sign up</button>
+                            <button  style={smallBtn} onClick={ () => this.props.changePage("signup") } disabled>Sign up</button>
                     </div>
                     <div style={or}>
                         <hr style={{width: '100px'}}/>OR<hr style={{width: '100px'}}/> 
