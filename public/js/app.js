@@ -19228,7 +19228,7 @@ var App = function (_Component) {
             this.state.page === "home" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Gui_Welcome_Home__["a" /* default */], { changePage: this.changePage }),
             this.state.page === "menu" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Gui_Welcome_Menu__["a" /* default */], { changePage: this.changePage, login: this.state.login, user: this.state.user }),
             this.state.page === "signup" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Gui_Welcome_Signup__["a" /* default */], { changePage: this.changePage }),
-            this.state.page === "game" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Gui_Map_GameApp__["a" /* default */], null)
+            this.state.page === "game" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Gui_Map_GameApp__["a" /* default */], { user: this.state.user })
           )
         )
       );
@@ -19425,7 +19425,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".home {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 7em;\n    animation: 1s animation;\n}\n\n.textfield {\n    font-size: 18px;\n    border: 0;\n    border-bottom: 1px solid black;\n    width: 300px;\n    padding: 8px;\n    background: transparent;\n}\n\n::placeholder {\n    color: lightblue;\n}\n\n.home * {\n    margin-top: 1em;\n}\n\n.home button {\n    font-weight: bold;\n    font-size: 18px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 320px;\n    background: #f1bc03;\n    cursor: pointer;\n}\n\n@keyframes animation {\n    from {opacity: 0;}\n    to {opacity: 1;}\n}", ""]);
+exports.push([module.i, ".home {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 7em;\n    margin-bottom: 6em;\n    animation: 1s animation;\n}\n\n.textfield {\n    font-size: 18px;\n    border: 0;\n    border-bottom: 1px solid black;\n    width: 300px;\n    padding: 8px;\n    background: transparent;\n}\n\n::placeholder {\n    color: lightblue;\n}\n\n.home * {\n    margin-top: 1em;\n}\n\n.home button {\n    font-weight: bold;\n    font-size: 18px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 320px;\n    background: #f1bc03;\n    cursor: pointer;\n}\n\n@keyframes animation {\n    from {opacity: 0;}\n    to {opacity: 1;}\n}", ""]);
 
 // exports
 
@@ -19581,7 +19581,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".menu {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 6em;\n    animation: 1s animation;\n}\n\n.menu * {\n    margin-top: 2em;\n}\n\n.menu button {\n    font-weight: bold;\n    font-size: 20px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 300px;\n    background: darkgreen;\n    cursor: pointer;\n}\n\n.userinfo {\n    font-size: 20px;\n    padding: 0.5em;\n    padding-left: 1em;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n}\n\n.profile-pic {\n    border: 2px solid white;\n    padding: 10px;\n    margin-right: 1em;\n}", ""]);
+exports.push([module.i, ".menu {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 6em;\n    margin-bottom: 6em;\n    animation: 1s animation;\n}\n\n.menu * {\n    margin-top: 2em;\n}\n\n.menu button {\n    font-weight: bold;\n    font-size: 20px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 300px;\n    background: darkgreen;\n    cursor: pointer;\n}\n\n.userinfo {\n    font-size: 20px;\n    padding: 0.5em;\n    padding-left: 1em;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n}\n\n.profile-pic {\n    border: 2px solid white;\n    padding: 10px;\n    margin-right: 1em;\n}", ""]);
 
 // exports
 
@@ -19741,7 +19741,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".signup {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 7em;\n    animation: 1s animation;\n}\n\n.signup * {\n    margin-top: 2em;\n}\n\n.signup button {\n    font-weight: bold;\n    font-size: 20px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 300px;\n    background: blue;\n    cursor: pointer;\n}", ""]);
+exports.push([module.i, ".signup {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 7em;\n    margin-bottom: 6em;\n    animation: 1s animation;\n}\n\n.signup * {\n    margin-top: 2em;\n}\n\n.signup button {\n    font-weight: bold;\n    font-size: 20px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 300px;\n    background: blue;\n    cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -19761,6 +19761,8 @@ exports.push([module.i, ".signup {\n    max-width: 400px;\n    text-align: cente
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__GameApp_CountDown__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__GameApp_Score__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Controller_Game__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_axios__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_axios__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19768,6 +19770,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
 
 
 
@@ -19858,6 +19862,12 @@ var GameApp = function (_React$Component) {
       if (__WEBPACK_IMPORTED_MODULE_7__Controller_Game__["a" /* default */].isDead) {
         // handle dead
         this.setState({ isDead: true });
+
+        __WEBPACK_IMPORTED_MODULE_8_axios___default.a.post('/postScore', { userId: this.props.user.id, score: __WEBPACK_IMPORTED_MODULE_7__Controller_Game__["a" /* default */].score }).then(function (result) {
+          console.log(result);
+        }).catch(function (err) {
+          console.log(err);
+        });
       }
     }
   }, {

@@ -9,6 +9,8 @@ import Score from './GameApp/Score'
 
 import Game from '../../Controller/Game'
 
+import Axios from 'axios'
+
 class GameApp extends React.Component {
   constructor(props) {
     super(props)
@@ -69,6 +71,12 @@ class GameApp extends React.Component {
     if(Game.isDead) {
       // handle dead
       this.setState( {isDead : true} )
+      
+      Axios.post('/postScore', { userId : this.props.user.id , score : Game.score }).then( (result)=> {
+        console.log(result)
+      }).catch((err) => {
+        console.log(err)
+      });
     }
   }
 

@@ -52,7 +52,7 @@ class App extends Component {
               {this.state.page === "home" && <Home changePage={this.changePage} />}
               {this.state.page === "menu" && <Menu changePage={this.changePage} login={this.state.login} user={this.state.user}/>}
               {this.state.page === "signup" && <Signup changePage={this.changePage} />}
-              {this.state.page === "game" && <GameApp />}
+              {this.state.page === "game" && <GameApp user={this.state.user}/>}
             </div>
           }
           </div>

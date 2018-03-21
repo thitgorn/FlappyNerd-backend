@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'UserLoginController@logout');
 
 Route::get('/getUser' , 'UserLoginController@getUser');
+
+Route::post('/postScore', 'ScoreController@postScore')->middleware('auth');
+
+Route::get('/getHighScore', 'ScoreController@getHighScore');
