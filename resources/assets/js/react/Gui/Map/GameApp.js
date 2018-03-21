@@ -74,7 +74,14 @@ class GameApp extends React.Component {
 
   render() {
     return (
-      <div>
+      <div  style={{
+        width: `100%`,
+        height: `100%`,
+        clip: 'auto',
+        position: 'absolute',
+        overflow: 'hidden',
+        backgroundImage: 'linear-gradient(to right, #adefff, white)'
+      }}>
         {this.state.isDead && <div
                               onClick={ () => {this.reset()}}
                               style={{ position:'fixed',

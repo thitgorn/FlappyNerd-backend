@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Flappy Nerd</title>
 
-        <link href="https://flappylaravel.herokuapp.com/css/app.css" rel="stylesheet" type="text/css">
+        <link href="/css/app.css" rel="stylesheet" type="text/css">
         <script$.ajaxSetup({
           headers: {
               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -17,7 +17,7 @@
     </head>
     <body>
         <div id="root"></div>
-        <script src="https://flappylaravel.herokuapp.com/js/app.js" ></script>
+        <script src="/js/app.js" ></script>
 
         @if (count($errors) > 0)
             <div class="alert alert-success hideMe">

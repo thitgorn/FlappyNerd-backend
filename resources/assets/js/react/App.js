@@ -41,21 +41,14 @@ class App extends Component {
   render() {
     return (
       <div>
-          <div style={{
-            width: `100%`,
-            height: `100%`,
-            clip: 'auto',
-            position: 'absolute',
-            overflow: 'hidden',
-            backgroundImage: 'linear-gradient(to right, #adefff, white)'
-          }}>
+          <div>
           { !this.state.isLoad && <div style={{ position: 'fixed',
                                                 top: `50%`,
                                                 left: `50%`,
                                                 /* bring your own prefixes */
                                                 transform: 'translate(-50%, -50%)'}}>หมุนๆ</div>}
           { this.state.isLoad &&
-            <div>
+            <div style={{ background: 'linear-gradient(to right, #adeefe, white)'}}>
               {this.state.page === "home" && <Home changePage={this.changePage} />}
               {this.state.page === "menu" && <Menu changePage={this.changePage} login={this.state.login} user={this.state.user}/>}
               {this.state.page === "signup" && <Signup changePage={this.changePage} />}

@@ -19126,7 +19126,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n}\n\nHTML {\n  background-image: linear-gradient(to right, #adeefe, white);\n}", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-family: sans-serif;\n}\n\nHTML {\n  background: linear-gradient(to right, #adeefe, white);\n}", ""]);
 
 // exports
 
@@ -19212,14 +19212,7 @@ var App = function (_Component) {
         null,
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { style: {
-              width: '100%',
-              height: '100%',
-              clip: 'auto',
-              position: 'absolute',
-              overflow: 'hidden',
-              backgroundImage: 'linear-gradient(to right, #adefff, white)'
-            } },
+          null,
           !this.state.isLoad && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { style: { position: 'fixed',
@@ -19231,7 +19224,7 @@ var App = function (_Component) {
           ),
           this.state.isLoad && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            null,
+            { style: { background: 'linear-gradient(to right, #adeefe, white)' } },
             this.state.page === "home" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Gui_Welcome_Home__["a" /* default */], { changePage: this.changePage }),
             this.state.page === "menu" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Gui_Welcome_Menu__["a" /* default */], { changePage: this.changePage, login: this.state.login, user: this.state.user }),
             this.state.page === "signup" && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Gui_Welcome_Signup__["a" /* default */], { changePage: this.changePage }),
@@ -19342,7 +19335,7 @@ var Home = function (_React$Component) {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'form',
-                    { method: 'POST', action: 'https://flappylaravel.herokuapp.com/login' },
+                    { method: 'POST', action: '/login' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'email', type: 'email', name: 'email', placeholder: 'Username', className: 'textfield', required: true, autoFocus: true }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', (_React$createElement = { id: 'password', type: 'password', name: 'password', placeholder: 'Password', className: 'textfield' }, _defineProperty(_React$createElement, 'type', 'password'), _defineProperty(_React$createElement, 'required', true), _React$createElement)),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -19432,7 +19425,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".home {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 7em;\n    animation: 1s animation;\n}\n\n.textfield {\n    font-size: 18px;\n    border: 0;\n    border-bottom: 1px solid black;\n    width: 300px;\n    padding: 8px;\n    background: transparent;\n}\n\n::placeholder {\n    color: lightblue;\n}\n\n.home * {\n    margin-top: 1em;\n}\n\n.home button {\n    font-weight: bold;\n    font-size: 18px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 320px;\n    background: #f1bc03;\n}\n\n@keyframes animation {\n    from {opacity: 0;}\n    to {opacity: 1;}\n}", ""]);
+exports.push([module.i, ".home {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 7em;\n    animation: 1s animation;\n}\n\n.textfield {\n    font-size: 18px;\n    border: 0;\n    border-bottom: 1px solid black;\n    width: 300px;\n    padding: 8px;\n    background: transparent;\n}\n\n::placeholder {\n    color: lightblue;\n}\n\n.home * {\n    margin-top: 1em;\n}\n\n.home button {\n    font-weight: bold;\n    font-size: 18px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 320px;\n    background: #f1bc03;\n    cursor: pointer;\n}\n\n@keyframes animation {\n    from {opacity: 0;}\n    to {opacity: 1;}\n}", ""]);
 
 // exports
 
@@ -19588,7 +19581,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".menu {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 6em;\n    animation: 1s animation;\n}\n\n.menu * {\n    margin-top: 2em;\n}\n\n.menu button {\n    font-weight: bold;\n    font-size: 20px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 300px;\n    background: darkgreen;\n}\n\n.userinfo {\n    font-size: 20px;\n    padding: 0.5em;\n    padding-left: 1em;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n}\n\n.profile-pic {\n    border: 2px solid white;\n    padding: 10px;\n    margin-right: 1em;\n}", ""]);
+exports.push([module.i, ".menu {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 6em;\n    animation: 1s animation;\n}\n\n.menu * {\n    margin-top: 2em;\n}\n\n.menu button {\n    font-weight: bold;\n    font-size: 20px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 300px;\n    background: darkgreen;\n    cursor: pointer;\n}\n\n.userinfo {\n    font-size: 20px;\n    padding: 0.5em;\n    padding-left: 1em;\n    background: rgba(0, 0, 0, 0.5);\n    color: white;\n}\n\n.profile-pic {\n    border: 2px solid white;\n    padding: 10px;\n    margin-right: 1em;\n}", ""]);
 
 // exports
 
@@ -19616,17 +19609,62 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Signup = function (_React$Component) {
     _inherits(Signup, _React$Component);
 
+    // TODO check same password with comfirmed password
     function Signup() {
         _classCallCheck(this, Signup);
 
-        return _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this));
+
+        _this.state = {
+            isMatch: false,
+            passwordValue: '',
+            confirmPasswordValue: ''
+        };
+        _this.updateConfirmPasswordValue = _this.updateConfirmPasswordValue.bind(_this);
+        _this.updatePasswordValue = _this.updatePasswordValue.bind(_this);
+        return _this;
     }
 
     _createClass(Signup, [{
+        key: 'updateConfirmPasswordValue',
+        value: function updateConfirmPasswordValue(evt) {
+            this.setState({
+                confirmPasswordValue: evt.target.value
+            });
+        }
+    }, {
+        key: 'updatePasswordValue',
+        value: function updatePasswordValue(evt) {
+            this.setState({
+                passwordValue: evt.target.value
+            });
+        }
+    }, {
+        key: 'getSignUpBtn',
+        value: function getSignUpBtn() {
+            if (this.state.passwordValue === this.state.confirmPasswordValue) {
+                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'button',
+                    { type: 'submit' },
+                    'Sign up'
+                );
+            }
+            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'button',
+                { type: 'submit', style: {
+                        fontWeight: 'bold',
+                        fontSize: '20px',
+                        color: '#ceffff',
+                        border: '0',
+                        padding: '12px',
+                        width: '300px',
+                        background: 'grey'
+                    }, disabled: true },
+                'Sign up'
+            );
+        }
+    }, {
         key: 'render',
-
-        // TODO check same password with comfirmed password
-
         value: function render() {
             var _this2 = this;
 
@@ -19640,16 +19678,12 @@ var Signup = function (_React$Component) {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'form',
-                    { method: 'POST', action: 'https://flappylaravel.herokuapp.com/register' },
+                    { method: 'POST', action: '/register' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'name', type: 'text', className: 'textfield', name: 'name', placeholder: 'Name', required: true, autofocus: true }),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'email', type: 'email', className: 'textfield', name: 'email', placeholder: 'Email', required: true }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'password', type: 'password', className: 'textfield', name: 'password', placeholder: 'Password', required: true }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { id: 'password-confirm', type: 'password', className: 'textfield', name: 'password_confirmation', placeholder: 'Confirm Password', required: true }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'button',
-                        { type: 'submit' },
-                        'Sign up'
-                    )
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { value: this.state.passwordValue, onChange: this.updatePasswordValue, id: 'password', type: 'password', className: 'textfield', name: 'password', placeholder: 'Password', required: true }),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { value: this.state.confirmPasswordValue, onChange: this.updateConfirmPasswordValue, id: 'password-confirm', type: 'password', className: 'textfield', name: 'password_confirmation', placeholder: 'Confirm Password', required: true }),
+                    this.getSignUpBtn()
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'button',
@@ -19707,7 +19741,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, ".signup {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 7em;\n    animation: 1s animation;\n}\n\n.signup * {\n    margin-top: 2em;\n}\n\n.signup button {\n    font-weight: bold;\n    font-size: 20px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 300px;\n    background: blue;\n}", ""]);
+exports.push([module.i, ".signup {\n    max-width: 400px;\n    text-align: center;\n    margin: auto;\n    margin-top: 7em;\n    animation: 1s animation;\n}\n\n.signup * {\n    margin-top: 2em;\n}\n\n.signup button {\n    font-weight: bold;\n    font-size: 20px;\n    color: #ceffff;\n    border: 0;\n    padding: 12px;\n    width: 300px;\n    background: blue;\n    cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -19833,7 +19867,14 @@ var GameApp = function (_React$Component) {
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        null,
+        { style: {
+            width: '100%',
+            height: '100%',
+            clip: 'auto',
+            position: 'absolute',
+            overflow: 'hidden',
+            backgroundImage: 'linear-gradient(to right, #adefff, white)'
+          } },
         this.state.isDead && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           {
@@ -22053,6 +22094,7 @@ var Game = {
     __WEBPACK_IMPORTED_MODULE_0__Bird_Bird_js__["a" /* default */].y = __WEBPACK_IMPORTED_MODULE_2__Map_Setting__["a" /* default */].height / 2;
     this.refreshBird();
     this.refreshObstracts();
+    this.updateScore();
   }
 };
 

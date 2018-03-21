@@ -5,5 +5,5 @@ body {
 }
 
 HTML {
-  background-image: linear-gradient(to right, #adeefe, white);
+  background: linear-gradient(to right, #adeefe, white);
 }

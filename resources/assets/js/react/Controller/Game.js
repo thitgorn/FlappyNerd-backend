@@ -92,6 +92,7 @@ var Game = {
     bird.y = setting.height / 2;
     this.refreshBird();
     this.refreshObstracts();
+    this.updateScore()
   }
 }
 

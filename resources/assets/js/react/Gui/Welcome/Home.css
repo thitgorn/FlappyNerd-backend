@@ -31,6 +31,7 @@
     padding: 12px;
     width: 320px;
     background: #f1bc03;
+    cursor: pointer;
 }
 
 @keyframes animation {
